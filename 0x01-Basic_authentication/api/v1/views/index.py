@@ -28,4 +28,5 @@ def unauth() -> str:
     Return:
       - raise 401
     """
-    return jsonify({"error": "unauthorized"}), 401
+    abort(401)
+    return jsonify({"status:ok"})
