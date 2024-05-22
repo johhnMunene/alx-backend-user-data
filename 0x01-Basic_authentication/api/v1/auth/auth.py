@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 """API authentication."""
 from flask import request
+from typing import List, TypeVar
+from models.user import User
 
 
 class Auth:
-    def require_auth(self, excluded_path=List[str]) -> bool:
+
+    """A class to manage the API authentication"""
+
+    def __init__(self) -> None:
+        """initializes the auth class"""
+        pass
+
+    def require_auth(self, path: str, excluded_paths: List[str]) -> bool:
         """auth
         """
         return False
