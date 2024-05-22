@@ -10,11 +10,11 @@ class Auth:
         return False
 
     def authentication_header(self, request=None) -> str:
-        """
+        """authentication_he
         """
         return None
 
     def current_user(self, request=None) -> Typevar('user'):
-        """
+        """current_user
         """
         return None
