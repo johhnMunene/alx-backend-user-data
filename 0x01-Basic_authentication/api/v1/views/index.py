@@ -34,4 +34,3 @@ def unauth() -> None:
     """
     abort(401)
     return jsonify({"error": "unauthorized"})
-  
