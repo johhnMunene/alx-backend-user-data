@@ -11,6 +11,7 @@ from flask import request
 from typing import List, TypeVar
 from models.user import User
 
+
 class Auth:
     """A class to manage API authentication.
 
