@@ -1,4 +1,6 @@
-# db.py
+#!/usr/bin/env python3
+"""DB module
+"""
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.orm.session import Session
