@@ -26,16 +26,16 @@ class DB:
             self.__session = DBSession()
         return self.__session
 
+    
     def add_user(self, email: str, hashed_password: str) -> User:
         """
-        Adds a user to the database.
-
-        :param email: Email of the user
-        :param hashed_password: Hashed password of the user
-        :return: User object
+        Adds a new user to the Database.
         """
-        new_user = User(email=email, hashed_password=hashed_password)
-        self._session.add(new_user)
-        self._session.commit()
-        return new_user
+        if not email or not hashed_password:
+            return
+        user = User(email=email, hashed_password=hashed_password)
+        session = self._session
+        session.add(user)
+        session.commit()
+        return user
 
